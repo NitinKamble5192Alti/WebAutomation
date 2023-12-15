@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="120.298" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="&quot;Add product to cart &quot;" name="verify login is successful with valid credentials" time="18.885">
+<system-out><![CDATA[
+Given navigate to home page.................................................passed
+When Click on navlink.......................................................passed
+When user enters as "mshirodkar53@gmail.com"................................passed
+And user clicks on continue.................................................passed
+And user enters "Welcome@2024"..............................................passed
+And user clicks on sign in..................................................passed
+Then verify user navigated to user home page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.1" time="47.541">
+<system-out><![CDATA[
+When user searches for "One Habit a Day"....................................passed
+And clicks on search button.................................................passed
+And Clicks on first search result "One Habit a Day".........................passed
+Then new window should opened and Verify product details....................passed
+And clicks on add to cart...................................................passed
+Then Navigate Back to Main window...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.2" time="27.971">
+<system-out><![CDATA[
+When user searches for "you can"............................................passed
+And clicks on search button.................................................passed
+And Clicks on first search result "you can".................................passed
+Then new window should opened and Verify product details....................passed
+And clicks on add to cart...................................................passed
+Then Navigate Back to Main window...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="&quot;Add product to cart &quot;" name="Click Proceed to buy Add address, verify user land on checkout page and payment option is visible and return back to cart." time="25.587">
+<system-out><![CDATA[
+When user click on cart button on home page.................................passed
+And clicks on Proceed to buy button.........................................passed
+And clicks Add new Address link.............................................passed
+Then user should enter details "Test Data" "9120192029" 431003 "03,N-7 Cidco" and click Use this address button.passed
+And Payment method options should be displayed..............................passed
+And user clicks on Amazon.in and further clicks on Return to cart button....passed
+Then Verify user lands on cart page with both items added in cart...........passed
+]]></system-out>
+</testcase>
+</testsuite>

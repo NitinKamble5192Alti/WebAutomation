@@ -17,6 +17,9 @@ public class ConfigFileReader {
     String ExtendedUrl;
     String driverPath;
     String browserName;
+	String userName;
+	String password;
+
 	
 	public ConfigFileReader(){
 		BufferedReader reader;
@@ -34,18 +37,28 @@ public class ConfigFileReader {
 			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
 		}		
 	}
-	
 
-	
 
 	public String getBaseUrl() {
 		baserurl = properties.getProperty("baseUrl");
 		if(baserurl != null) return baserurl;
 		else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
+
+	public String getUsername(){
+		userName = properties.getProperty("userName");
+		if(userName != null) return userName;
+		else throw new RuntimeException("Username not specified in the Configuration.properties file.");
+    }
+
+	public String getPassword(){
+		password = properties.getProperty("password");
+		if(password != null) return password ;
+		else throw new RuntimeException("Password not specified in the Configuration.properties file.");
+	}
 	
 
-	public String getSenderCountryCode() {
+	/*public String getSenderCountryCode() {
 		SenderCountryCode = properties.getProperty("SenderCountryCode");
 		if(SenderCountryCode != null) return SenderCountryCode;
 		else throw new RuntimeException("SenderCountryCode not specified in the Configuration.properties file.");
@@ -59,11 +72,11 @@ public class ConfigFileReader {
 	    ExtendedUrl = properties.getProperty(url);
 		if(ExtendedUrl != null) return ExtendedUrl;
 		else throw new RuntimeException("ExtendedUrl not specified in the Configuration.properties file.");
-	}
+	}*/
 	
-	public String getApplicationHomePageURL(String baseUrl,String SenderCountryCode,String SenderLanguageCode,String extenderUrl) {
-		System.out.println("Url : -"+baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl);
-		return baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl;
+	public String getApplicationHomePageURL(String baseUrl) {
+		System.out.println("Url : -"+baseUrl);
+		return baseUrl;
 	}
 	public String getBrowser() {
 		browserName = properties.getProperty("browserName");
