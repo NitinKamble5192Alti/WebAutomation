@@ -61,9 +61,9 @@ public class ConfigFileReader {
 		else throw new RuntimeException("ExtendedUrl not specified in the Configuration.properties file.");
 	}
 	
-	public String getApplicationHomePageURL(String baseUrl,String SenderCountryCode,String SenderLanguageCode,String extenderUrl) {
-		System.out.println("Url : -"+baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl);
-		return baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl;
+	public String getApplicationHomePageURL(String baseUrl) {
+		System.out.println("Url : -"+baseUrl);
+		return baseUrl;
 	}
 	public String getBrowser() {
 		browserName = properties.getProperty("browserName");

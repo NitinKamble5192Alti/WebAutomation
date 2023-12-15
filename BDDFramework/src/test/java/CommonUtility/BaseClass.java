@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +19,8 @@ public class BaseClass {
     ConfigFileReader fileReader; 
     String browser;
 
-   public void navigateToUrl(String extendedURl) {
-	  String url=fileReader.getApplicationHomePageURL(fileReader.getBaseUrl(), fileReader.getSenderCountryCode(),fileReader.getSenderLangaugeCode(),fileReader.getExtendedUrl(extendedURl));
+   public void navigateToUrl() {
+	  String url=fileReader.getApplicationHomePageURL(fileReader.getBaseUrl());
 	  driver.get(url);
 	
     }
@@ -36,10 +37,13 @@ public class BaseClass {
 	     System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/resources/drivers/chromedriver.exe");
 	     ChromeOptions options=new ChromeOptions();
 	     driver=new ChromeDriver(options);
+	     options.addArguments("incognito");
 	     driver.manage().window().maximize();
 	    }else {
 	    	throw new Exception("incorrect browser");
 	    }
+
+	    
    }
    
  
