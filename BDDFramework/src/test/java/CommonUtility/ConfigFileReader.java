@@ -34,10 +34,6 @@ public class ConfigFileReader {
 			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
 		}		
 	}
-	
-
-	
-
 	public String getBaseUrl() {
 		baserurl = properties.getProperty("baseUrl");
 		if(baserurl != null) return baserurl;
@@ -45,25 +41,24 @@ public class ConfigFileReader {
 	}
 	
 
-	public String getSenderCountryCode() {
-		SenderCountryCode = properties.getProperty("SenderCountryCode");
-		if(SenderCountryCode != null) return SenderCountryCode;
-		else throw new RuntimeException("SenderCountryCode not specified in the Configuration.properties file.");
-	}
-	public String getSenderLangaugeCode() {
-		SenderLanguageCode = properties.getProperty("SenderLanguageCode");
-		if(SenderLanguageCode != null) return SenderLanguageCode;
-		else throw new RuntimeException("SenderLanguageCode not specified in the Configuration.properties file.");
-	}
-	public String getExtendedUrl(String url) {
-	    ExtendedUrl = properties.getProperty(url);
-		if(ExtendedUrl != null) return ExtendedUrl;
-		else throw new RuntimeException("ExtendedUrl not specified in the Configuration.properties file.");
-	}
-	
-	public String getApplicationHomePageURL(String baseUrl,String SenderCountryCode,String SenderLanguageCode,String extenderUrl) {
-		System.out.println("Url : -"+baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl);
-		return baseUrl+"/"+SenderCountryCode+"/"+SenderLanguageCode+"/"+extenderUrl;
+	/*
+	 * public String getSenderCountryCode() { SenderCountryCode =
+	 * properties.getProperty("SenderCountryCode"); if(SenderCountryCode != null)
+	 * return SenderCountryCode; else throw new
+	 * RuntimeException("SenderCountryCode not specified in the Configuration.properties file."
+	 * ); } public String getSenderLangaugeCode() { SenderLanguageCode =
+	 * properties.getProperty("SenderLanguageCode"); if(SenderLanguageCode != null)
+	 * return SenderLanguageCode; else throw new
+	 * RuntimeException("SenderLanguageCode not specified in the Configuration.properties file."
+	 * ); } public String getExtendedUrl(String url) { ExtendedUrl =
+	 * properties.getProperty(url); if(ExtendedUrl != null) return ExtendedUrl; else
+	 * throw new
+	 * RuntimeException("ExtendedUrl not specified in the Configuration.properties file."
+	 * ); }
+	 */
+	public String getApplicationHomePageURL(String baseUrl) {
+	    System.out.println("Url : -"+baseUrl);
+	    return baseUrl;
 	}
 	public String getBrowser() {
 		browserName = properties.getProperty("browserName");
