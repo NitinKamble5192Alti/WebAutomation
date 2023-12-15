@@ -130,6 +130,7 @@ public class CheckoutPage {
             throw new NoSuchElementException("Something Went Wrong!");
 
         System.out.println("Exiting!");
+        driver.quit();
 
     }
 
