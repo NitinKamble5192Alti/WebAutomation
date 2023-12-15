@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="120.298" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="&quot;Add product to cart &quot;" name="verify login is successful with valid credentials" time="18.885">
+<testsuite name="Cucumber" time="85.818" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="&quot;Add product to cart &quot;" name="verify login is successful with valid credentials" time="10.574">
 <system-out><![CDATA[
 Given navigate to home page.................................................passed
 When Click on navlink.......................................................passed
@@ -11,7 +11,7 @@ And user clicks on sign in..................................................pass
 Then verify user navigated to user home page................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.1" time="47.541">
+<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.1" time="29.8">
 <system-out><![CDATA[
 When user searches for "One Habit a Day"....................................passed
 And clicks on search button.................................................passed
@@ -21,7 +21,7 @@ And clicks on add to cart...................................................pass
 Then Navigate Back to Main window...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.2" time="27.971">
+<testcase classname="&quot;Add product to cart &quot;" name="Search for product and add product to cart and verify product details. - Example #1.2" time="20.879">
 <system-out><![CDATA[
 When user searches for "you can"............................................passed
 And clicks on search button.................................................passed
@@ -31,7 +31,7 @@ And clicks on add to cart...................................................pass
 Then Navigate Back to Main window...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="&quot;Add product to cart &quot;" name="Click Proceed to buy Add address, verify user land on checkout page and payment option is visible and return back to cart." time="25.587">
+<testcase classname="&quot;Add product to cart &quot;" name="Click Proceed to buy Add address, verify user land on checkout page and payment option is visible and return back to cart." time="24.409">
 <system-out><![CDATA[
 When user click on cart button on home page.................................passed
 And clicks on Proceed to buy button.........................................passed
